@@ -1,0 +1,121 @@
+{
+    "data": "data",
+    "echo": "data/echos",
+    "feature": "data/features",
+    "model": "data/models",
+    "low": 55000,
+    "high": 25000,
+    "order": 5,
+    "raw_data_header": 0,
+    "feature_header": 4,
+    "options": {
+        "2.86MHz": {
+            "value": 2860000.0,
+            "echo_size": 4096,
+            "noise_size": 0,
+            "variance_threshold": 0.015,
+            "echo_size_left": 256,
+            "MLP": {
+                "Train Model Human Non Human": {
+                    "solver": "adam",
+                    "activation": "tanh",
+                    "hidden_layer_sizes": [31]
+
+                },
+                "Train Model Other Objects": {
+                    "solver": "adam",
+                    "activation": "tanh",
+                    "hidden_layer_sizes": [31]
+                }
+            },
+            "Random_Forest": {
+                "Train Model Human Non Human": {
+                    "n_estimators": 300,
+                    "min_samples_split": 2,
+                    "min_samples_leaf": 3,
+                    "max_depth": 110
+
+                },
+                "Train Model Other Objects": {
+                    "n_estimators": 300,
+                    "min_samples_split": 2,
+                    "min_samples_leaf": 3,
+                    "max_depth": 110
+                }
+            }
+        },
+        "1.14MHz": {
+            "value": 1140000.0,
+            "echo_size": 2048,
+            "echo_size_original": 2048,
+            "noise_size": 10,
+            "threshold": 0.15,
+            "variance_threshold": 0.015,
+            "echo_size_left": 356,
+            "echo_size_left_original": 356,
+            "MLP": {
+                "Train Model Human Non Human": {
+                    "solver": "adam",
+                    "activation": "relu",
+                    "hidden_layer_sizes": [31]
+
+                },
+                "Train Model Other Objects": {
+                    "solver": "adam",
+                    "activation": "relu",
+                    "hidden_layer_sizes": [31]
+                }
+            },
+            "Random_Forest": {
+                "Train Model Human Non Human": {
+                    "n_estimators": 300,
+                    "min_samples_split": 2,
+                    "min_samples_leaf": 3,
+                    "max_depth": 110
+                },
+                "Train Model Other Objects": {
+                    "n_estimators": 300,
+                    "min_samples_split": 2,
+                    "min_samples_leaf": 3,
+                    "max_depth": 110
+                }
+            }
+        },
+        "114KHz": {
+            "value": 114000.0,
+            "echo_size": 512,
+            "noise_size": 350,
+            "variance_threshold": 0.012,
+            "echo_size_left": 100,
+            "low": 56000,
+            "MLP": {
+                "Train Model Human Non Human": {
+                    "solver": "adam",
+                    "activation": "relu",
+                    "hidden_layer_sizes": [13, 10]
+
+                },
+                "Train Model Other Objects": {
+                    "solver": "adam",
+                    "activation": "tanh",
+                    "hidden_layer_sizes": [13, 10]
+                }
+            },
+            "Random_Forest": {
+                "Train Model Human Non Human": {
+                    "n_estimators": 300,
+                    "min_samples_split": 2,
+                    "min_samples_leaf": 3,
+                    "max_depth": 110
+
+                },
+                "Train Model Other Objects": {
+                    "n_estimators": 300,
+                    "min_samples_split": 2,
+                    "min_samples_leaf": 3,
+                    "max_depth": 110
+                }
+            }
+        }
+    }
+}
